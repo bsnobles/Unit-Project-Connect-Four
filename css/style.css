@@ -1,0 +1,87 @@
+body {
+  height: 100vh;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Fjalla One', sans-serif;
+  margin: 80px 0 0 0;
+}
+
+#title {
+  font-size: 80px;
+  margin: 0;
+  padding: 0 50px;
+  border-radius: 50%;
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  25% {
+    color: pink;
+  }
+  50% {
+    color: blue;
+  }
+  25% {
+    color: purple;
+  }
+}
+
+
+#message {
+  font-size: 30px;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 400px;
+  margin: 20px 0;
+  width: 500px;
+  border: 3px solid;
+}
+
+.cell {
+  align-items: center;
+  background: #a5c6ff;
+  display: flex;
+  height: 65.6px;
+  justify-content: center;
+  width: 70.6px;
+}
+
+
+
+.cell::after {
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: 2px solid darkblue;
+  content: '';
+  cursor: pointer;
+  height: 55px;
+  width: 55px;
+}
+
+.cell.red::after {
+  background-color: rgb(255, 0, 0);
+}
+
+.cell.black::after {
+  background-color: black;
+}
+
+.cell.grey::after {
+  background-color: rgb(18, 91, 18);
+}
+
+#reset {
+  margin: 5px 0;
+}
+
+
